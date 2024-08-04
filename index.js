@@ -106,6 +106,6 @@ async function validateForm(data, rules) {
   };
 }
 
-module.export = {
+module.exports = {
   validateForm
 }
