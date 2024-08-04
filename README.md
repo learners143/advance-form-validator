@@ -28,9 +28,8 @@ The validateForm function supports the following validation rules:
 ### Type Validation:
 
 - `type`: 'string' - Ensures the field is a string.
-- `type`: 'number' - Ensures the field is a number.
+- `type`: 'number' - Ensures the field is a phone number.
 - `type`: 'email' - Ensures the field is a valid email address.
-- `type`: 'phone' - Ensures the field is a valid phone number.
 - `type`: 'file' - Ensures the field is a valid file with type and size constraints.
 
 ### Required Field:
@@ -79,11 +78,11 @@ const rules = {
     }
   },
   phone: { 
-    type: 'phone', 
+    type: 'number', 
     required: true,
     messages: {
       required: 'Phone number is required.',
-      phone: 'Invalid phone number format.'
+      number: 'Invalid phone number format.'
     }
   },
   username: { 
@@ -136,11 +135,10 @@ const rules = {
 
 ```
 const result = await validateForm(formData, rules);
-    setErrors(result.errors);
+console.log(result.errors);
 
-    // Handle valid data (if needed)
-    console.log('Valid Data:', result.validData);
-  };
+// Handle valid data (if needed)
+console.log('Valid Data:', result.data);
 ```
 ## Combined error
 

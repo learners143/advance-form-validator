@@ -102,7 +102,7 @@ async function validateForm(data, rules) {
 
   return {
     errors,
-    validData
+    data: validData
   };
 }
 
