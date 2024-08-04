@@ -133,3 +133,32 @@ const rules = {
   }
 };
 ```
+
+```
+const result = await validateForm(formData, rules);
+    setErrors(result.errors);
+
+    // Handle valid data (if needed)
+    console.log('Valid Data:', result.validData);
+  };
+```
+## Combined error
+
+```
+const combinedErrors = Object.values(errors).flat();
+```
+
+### Displaying Errors
+
+```
+{combinedErrors.length > 0 && (
+        <div className="error-container">
+          <h3>Form Errors:</h3>
+          <ul>
+            {combinedErrors.map((error, index) => (
+              <li key={index}>{error}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+```
