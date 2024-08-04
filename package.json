@@ -1,0 +1,16 @@
+{
+  "name": "advance-form-validator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Sanjeet Kumar",
+  "license": "ISC",
+  "description": "A npm package that helps to validate form data ",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/learners143/advance-form-validator.git"
+  }
+}
